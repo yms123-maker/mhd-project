@@ -12,12 +12,32 @@
         </div>
       </a>
     </header>
+    <Swiper :autoplay='2000' :loop='true' @change="changeHandle">
+        <SwiperItem>1</SwiperItem>
+        <SwiperItem>2</SwiperItem>
+        <SwiperItem>3</SwiperItem>
+    </Swiper>
+    <Swiper :autoplay='2000' :loop='true' @change="changeHandle">
+        <SwiperItem>1</SwiperItem>
+        <SwiperItem>2</SwiperItem>
+        <SwiperItem>3</SwiperItem>
+    </Swiper>
   </div>
 </template>
 
 <script>
+import { Swiper, SwiperItem } from '@/components/Swiper'
 export default {
-  name: 'Home'
+  name: 'Home',
+  components: {
+    Swiper,
+    SwiperItem
+  },
+  methods: {
+    changeHandle (payload) {
+      console.log(payload)
+    }
+  }
 }
 </script>
 
@@ -52,6 +72,10 @@ export default {
       background: url(~@/assets/icon/header-search.png);
       background-size: 100%;
     }
+  }
+  .swiper-container {
+    width: 100%;
+    height: 180px;
   }
 }
 </style>
