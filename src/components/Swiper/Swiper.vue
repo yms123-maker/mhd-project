@@ -1,5 +1,5 @@
 <template>
-  <div class="swiper-container" ref="swiper">
+  <div class="swiper-container">
     <div class="swiper-wrapper">
         <slot></slot>
     </div>
@@ -49,7 +49,7 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
-    .swiper-container {
+    .swiper-container{
         width: 100%;
         height: 180px;
     }
@@ -63,7 +63,6 @@ export default {
     border-radius: 50%;
     background-color: hsla(0, 0%, 100%, 0.7);
   }
-
   .swiper-pagination-bullet-active {
     width: 20px;
     height: 10px;
