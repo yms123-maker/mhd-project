@@ -12,6 +12,9 @@ import Search from '../views/Search'
 import SearchResult from '../views/SearchResult'
 import Vip from '../views/Vip'
 import Home from '../views/Home'
+import nprogress from 'nprogress'
+import 'nprogress/nprogress.css'
+nprogress.configure({ showSpinner: false })
 Vue.use(VueRouter)
 
 const routes = [
@@ -39,5 +42,11 @@ const routes = [
 const router = new VueRouter({
   routes
 })
-
+router.beforeEach((to, from, next) => {
+  nprogress.start()
+  next()
+})
+router.afterEach((to, from) => {
+  nprogress.done()
+})
 export default router

@@ -53,9 +53,6 @@ export default {
             alert(res.data.code_msg)
           }
         })
-        .catch(err => {
-          alert('网络异常' + err)
-        })
     },
     getTypesList (subject) {
       getTypesList(subject)
@@ -65,9 +62,6 @@ export default {
           } else {
             alert(res.data.code_msg)
           }
-        })
-        .catch(err => {
-          alert('网络异常' + err)
         })
     }
   },

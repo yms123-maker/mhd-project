@@ -3,7 +3,7 @@
     <normal-header title="排行"></normal-header>
     <div class="ranking-main">
       <header-type :types="types" @click = 'onChange'></header-type>
-      <cartoon-list :list = "cartoonList"></cartoon-list>
+      <cartoon-list :list = "cartoonList" :isRanking="true"></cartoon-list>
     </div>
   </div>
 </template>
@@ -64,9 +64,6 @@ export default {
           } else {
             alert(res.data.code_msg)
           }
-        })
-        .catch(err => {
-          alert('网络异常' + err)
         })
     }
   }

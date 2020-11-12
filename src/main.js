@@ -3,6 +3,8 @@ import App from './App.vue'
 import router from './router'
 import store from './store'
 import '../src/assets/styles/base.scss'
+import { Notify } from 'vant'
+Vue.use(Notify)
 Vue.config.productionTip = false
 
 Vue.filter('formatYi', (value) => {

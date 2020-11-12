@@ -1,8 +1,8 @@
 <template>
   <header class="header-normal">
     <div class="header-back" @click="goBack"></div>
-    <span class="header-title font-32">分类</span>
-    <div class="header-search" @click = "goSearch"></div>
+    <span class="header-title font-32">{{title}}</span>
+    <div class="header-search" @click = "goSearch" v-show = "showRight"></div>
   </header>
 </template>
 
@@ -13,6 +13,10 @@ export default {
     title: {
       type: String,
       default: '漫画岛'
+    },
+    showRight: {
+      type: Boolean,
+      default: true
     }
   },
   methods: {
