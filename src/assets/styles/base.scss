@@ -46,10 +46,14 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
-html,body,#app{
+html,
+body,
+#app{
+	// 如果你在这里想使用px单位，不希望转换成rem 
+	// 只需要将 px  PX
+	max-width: 540PX;
   height: 100%;
   margin: auto;
-  max-width: 800PX;
 }
 a:active,
 a:hover,

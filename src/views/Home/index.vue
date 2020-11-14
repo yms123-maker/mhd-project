@@ -1,5 +1,6 @@
 <template>
   <div class="page-home">
+    <router-link to="/city">当前选中城市为：{{ $store.getters['city/curCityName']}}</router-link>
     <index-header></index-header>
     <div class="index_main">
       <Swiper
@@ -10,7 +11,7 @@
         v-if="bannerList.length > 0"
       >
         <SwiperItem v-for="item in bannerList" :key="item.id">
-          <img :src="item.imageurl" />
+          <img v-lazy="item.imageurl" />
         </SwiperItem>
       </Swiper>
       <index-nav></index-nav>
@@ -23,7 +24,7 @@
         >
           <img
             class="img"
-            src="https://wechatapp.zhuishushenqi.com/mhd/201711/gongan.jpg"
+            v-lazy= "`https://wechatapp.zhuishushenqi.com/mhd/201711/gongan.jpg`"
           />
           <div>沪公网安备 31011202006214号</div>
         </a>
